@@ -1,0 +1,1307 @@
+/* Общие стили */
+body {
+    font-family: 'Handjet', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #202223;
+    color: #333;
+   
+    
+}
+
+html ,body{
+    height: 100%;
+}
+
+h1, h2{
+    margin: 0;
+    color: #fff;
+   text-align: center;
+   padding: 0.5%;
+   font-size: 40px;
+}
+
+
+/* Блок с 4 лучшими функциями */
+.features {
+    background-image: url("img/firstimg.jpg");;
+    background-size: cover;
+    height: 800px;
+   
+    background-position: center; /* Центрирование изображения */
+   
+}
+
+
+
+nav {
+    background-color: #202223;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    
+}
+
+/* Стили для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Адаптивность для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    .feature {
+        flex-basis: calc(50% - 20px);
+    }
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #fff;
+    padding: 30px ;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Анимация при наведении */
+}
+
+.menu-item:hover {
+   color: #4CAF50; /* Ярко-зеленый цвет при наведении */
+    transform: scale(1.2); /* Увеличение размера при наведении */
+}
+.radio-buttons {
+    display: none;
+}
+
+/* Стили для кнопок */
+.button-container {
+    display: flex;
+    margin: 2% 30%;
+}
+
+.button {
+    padding: 10px 30px;
+    margin: 10px;
+    border: none;
+    color: #fff;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: #373434;
+}
+
+.slider-container {
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.slider img {
+    width: 80%; /* изменено, чтобы изображение было адаптивным */
+    height: auto;
+    margin:0 10%;
+    
+}
+
+
+/* Скрыть radio-кнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Применить стили при выборе соответствующей radio-кнопки */
+#btn1:checked ~ .slider { transform: translateX(0); }
+#btn2:checked ~ .slider { transform: translateX(-100%); }
+#btn3:checked ~ .slider { transform: translateX(-200%); }
+#btn4:checked ~ .slider { transform: translateX(-300%); }
+
+/* Стили для кнопок при наведении */
+.button:hover {
+    transform: scale(1.2);
+    color: green;
+    transition: all 0.3s ease;
+}
+
+.roadmap{
+    position: none;
+}
+
+
+
+.arrow-right{
+    position: absolute;
+    top: 139em;
+    left: 56.5em;
+  }
+  .arrow-right::before,
+  .arrow-right::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-right2{
+   
+    top: 139em;
+    left: 33em;
+  }
+  .arrow-right2::before,
+  .arrow-right2::after{
+    content:"" ;
+    
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-top{
+    position: absolute;
+    top: 133em;
+    left: 42.5em;
+  }
+  .arrow-top::before,
+  .arrow-top::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+  .arrow-top2{
+    position: absolute;
+    top: 148em;
+    left: 42.5em;
+  }
+  .arrow-top2::before,
+  .arrow-top2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp{
+    position: absolute;
+    top: 133em;
+    left: 49.5em;
+  }
+  .arrow-tp::before,
+  .arrow-tp::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp2{
+    position: absolute;
+    top: 148em;
+    left: 49.5em;
+  }
+  .arrow-tp2::before,
+  .arrow-tp2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left{
+    position: absolute;
+    top: 142em;
+    left: 58.5em;
+  }
+  .arrow-left::before,
+  .arrow-left::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left2{
+    position: absolute;
+    top: 142em;
+    left: 34.5em;
+  }
+  .arrow-left2::before,
+  .arrow-left2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+.arrow-right{
+    position: absolute;
+    top: 139em;
+    left: 56.5em;
+  }
+  .arrow-right::before,
+  .arrow-right::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-right2{
+    position: absolute;
+    top: 139em;
+    left: 33em;
+  }
+  .arrow-right2::before,
+  .arrow-right2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-top{
+    position: absolute;
+    top: 133em;
+    left: 42.5em;
+  }
+  .arrow-top::before,
+  .arrow-top::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+  .arrow-top2{
+    position: absolute;
+    top: 148em;
+    left: 42.5em;
+  }
+  .arrow-top2::before,
+  .arrow-top2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp{
+    position: absolute;
+    top: 133em;
+    left: 49.5em;
+  }
+  .arrow-tp::before,
+  .arrow-tp::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp2{
+    position: absolute;
+    top: 148em;
+    left: 49.5em;
+  }
+  .arrow-tp2::before,
+  .arrow-tp2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left{
+    position: absolute;
+    top: 142em;
+    left: 58.5em;
+  }
+  .arrow-left::before,
+  .arrow-left::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left2{
+    position: absolute;
+    top: 142em;
+    left: 34.5em;
+  }
+  .arrow-left2::before,
+  .arrow-left2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+  /**/
+.center{
+    position: absolute;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: darkgray;
+    width: min-content;
+    border-radius: 30%;
+    left:  675px;
+    top: 2215px;
+}
+.left{
+    position: absolute;
+    color: #fff;
+    background-color: darkgray;
+    width: min-content;
+    border-radius: 30%;
+    padding: 5px 20px;
+    left: 350px;
+    top: 2215px;    
+}
+.rigth{
+    position: absolute;
+    color: #fff;
+    background-color: darkgray;
+    width: min-content;
+    border-radius: 30%;
+    padding: 5px 20px;
+    top: 2215px; 
+    left: 1000px;
+    
+}
+    
+.down{
+    position: absolute;
+    color: #fff;
+    background-color: darkgray;
+    width: min-content;
+    border-radius: 30%;
+    padding: 5px 20px;
+    top: 2455px; 
+    left:  695px;
+}
+.up{
+    color: #fff;
+    background-color: darkgray;
+    width: min-content;
+    border-radius: 30%;
+    padding: 5px 20px;
+    position: absolute;
+    left:  695px;
+    bottom: -1400px;
+}
+
+
+#btn1:checked ~ .first{
+    margin-left: 0;
+}
+#btn2:checked ~ .first{
+    margin-left: -20%;
+}
+#btn3:checked ~ .first{
+    margin-left: -40%;
+}
+#btn4:checked ~ .first{
+    margin-left: 60%;
+}
+
+
+
+.text2{
+    display: flex;
+    margin-right: 20px;
+}
+
+
+.alltext{
+    margin-top: 250px;
+}
+
+
+
+.arrow-right{
+    position: absolute;
+    top: 139em;
+    left: 56.5em;
+  }
+  .arrow-right::before,
+  .arrow-right::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-right2{
+    position: absolute;
+    top: 139em;
+    left: 33em;
+  }
+  .arrow-right2::before,
+  .arrow-right2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-top{
+    position: absolute;
+    top: 133em;
+    left: 42.5em;
+  }
+  .arrow-top::before,
+  .arrow-top::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+  .arrow-top2{
+    position: absolute;
+    top: 148em;
+    left: 42.5em;
+  }
+  .arrow-top2::before,
+  .arrow-top2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp{
+    position: absolute;
+    top: 133em;
+    left: 49.5em;
+  }
+  .arrow-tp::before,
+  .arrow-tp::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp2{
+    position: absolute;
+    top: 148em;
+    left: 49.5em;
+  }
+  .arrow-tp2::before,
+  .arrow-tp2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left{
+    position: absolute;
+    top: 142em;
+    left: 58.5em;
+  }
+  .arrow-left::before,
+  .arrow-left::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left2{
+    position: absolute;
+    top: 142em;
+    left: 34.5em;
+  }
+  .arrow-left2::before,
+  .arrow-left2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+.arrow-right{
+    position: absolute;
+    top: 139em;
+    left: 56.5em;
+  }
+  .arrow-right::before,
+  .arrow-right::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-right2{
+    position: absolute;
+    top: 139em;
+    left: 33em;
+  }
+  .arrow-right2::before,
+  .arrow-right2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(45deg) translateY(-50%);
+  animation: arrow 1s linear infinite;
+  }
+  .arrow-right2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow{
+    0%{
+      left: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      left: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-top{
+    position: absolute;
+    top: 133em;
+    left: 42.5em;
+  }
+  .arrow-top::before,
+  .arrow-top::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+  .arrow-top2{
+    position: absolute;
+    top: 148em;
+    left: 42.5em;
+  }
+  .arrow-top2::before,
+  .arrow-top2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+   
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(-45deg) translateY(-10%);
+  animation: arrow2 1s linear infinite;
+  }
+  .arrow-top2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow2{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp{
+    position: absolute;
+    top: 133em;
+    left: 49.5em;
+  }
+  .arrow-tp::before,
+  .arrow-tp::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+
+  .arrow-tp2{
+    position: absolute;
+    top: 148em;
+    left: 49.5em;
+  }
+  .arrow-tp2::before,
+  .arrow-tp2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(135deg) translateY(-10%);
+  animation: arrow3 1s linear infinite;
+  }
+  .arrow-tp2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow3{
+    0%{
+      top: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      top: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left{
+    position: absolute;
+    top: 142em;
+    left: 58.5em;
+  }
+  .arrow-left::before,
+  .arrow-left::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
+
+  .arrow-left2{
+    position: absolute;
+    top: 142em;
+    left: 34.5em;
+  }
+  .arrow-left2::before,
+  .arrow-left2::after{
+    content:"" ;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  transform: rotate(228deg) translateY(-10%);
+  animation: arrow4 1s linear infinite;
+  }
+  .arrow-left2::after{
+    animation-delay: 1.5s;
+  }
+  @keyframes arrow4{
+    0%{
+      right: -10px;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      right: 30px;
+      opacity: 0;
+    }
+  }
